@@ -139,8 +139,19 @@ export class WebsocketSessionManager {
 
             this.webSocketPort = defaultWebSocketPort;
         }
-        this.webSocketURI = "ws://" + this.webSocketHost + ":" + this.webSocketPort;
-        this.httpChannelURI = "http://" + this.webSocketHost + ":" + this.webSocketPort;
+        const defaultWebSocketHost = "127.0.0.1";
+        this.webSocketHost = configManager.current.KeePassRPCWebSocketHost;
+        if (!this.webSocket) {
+            configManager.current.KeePassRPCWebSocketHost = defaultWebSocketHost;
+            configManager.save();
+
+            this.webSocketHost = defaultWebSocketHost;
+        }
+        const secureSuffix = configManager.current.KeePassRPCWebSocketSecure ? "s" : "";
+        this.webSocketURI =
+            "ws" + secureSuffix + "://" + this.webSocketHost + ":" + this.webSocketPort;
+        this.httpChannelURI =
+            "http" + secureSuffix + "://" + this.webSocketHost + ":" + this.webSocketPort;
     }
 
     tryToconnectToWebsocket() {

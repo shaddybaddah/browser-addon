@@ -179,8 +179,16 @@
     "message": "When opening or logging in to KeePass, use this database file",
     "description": ""
   },
+  "pref_keePassRPCHost_label": {
+    "message": "Communicate with KeePass using this TCP/IP host",
+    "description": ""
+  },
   "pref_keePassRPCPort_label": {
     "message": "Communicate with KeePass using this TCP/IP port",
+    "description": ""
+  },
+  "pref_keePassRPCSecure_label": {
+    "message": "Communicate with KeePass using secure TCP/IP",
     "description": ""
   },
   "pref_keePassRPCPortWarning_label": {
