@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Kee - Password Manager",
+    "name": "Kee - Password Manager (Shaddy Baddah customized)",
     "default_locale": "en",
     "version": "3.9.0",
     "version_name": "3.9.0",
@@ -132,8 +132,8 @@
     },
     "applications": {
         "gecko": {
-            "id": "keefox@chris.tomlinson",
-            "update_url": "https://raw.githubusercontent.com/kee-org/browser-addon-updates/master/beta/update.json",
+            "id": "beryllium@shaddybaddah.name",
+            "update_url": "https://raw.githubusercontent.com/shaddybaddah/browser-addon-updates/master/beta/update.json",
             "strict_min_version": "78.0"
         }
     }
