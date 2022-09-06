@@ -141,7 +141,7 @@ export class WebsocketSessionManager {
         }
         const defaultWebSocketHost = "127.0.0.1";
         this.webSocketHost = configManager.current.KeePassRPCWebSocketHost;
-        if (!this.webSocket) {
+        if (!this.webSocketHost) {
             configManager.current.KeePassRPCWebSocketHost = defaultWebSocketHost;
             configManager.save();
 
