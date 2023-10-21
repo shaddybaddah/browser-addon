@@ -179,6 +179,10 @@
         "message": "使用此 TCP/IP 端口与 KeePass 通信",
         "description": ""
     },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
+    },
     "pref_keePassRPCPortWarning_label": {
         "message": "注意：一同更改 KeePass.config 中的设置，否则 Kee 将不能始终与 KeePass 保持通讯",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"

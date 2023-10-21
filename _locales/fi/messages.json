@@ -179,6 +179,10 @@
         "message": "Yhdistä KeePass tämän TCP/IP portin kautta",
         "description": ""
     },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
+    },
     "pref_keePassRPCPortWarning_label": {
         "message": "Huom: Muista vaihtaa portti myös KeePassin lisäosan asetuksista tai muuten Kee ei toimi oikein",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"

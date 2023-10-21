@@ -55,7 +55,9 @@ export class Config {
     connSLServerMin: number;
     keePassDBToOpen: string;
     keePassMRUDB: string;
+    KeePassRPCWebSocketHost: string;
     KeePassRPCWebSocketPort: number;
+    KeePassRPCWebSocketSecure: boolean;
     KPRPCUsername: string;
     KPRPCStoredKeys: { [key: string]: string };
     lastConnectedToKeePass: string;

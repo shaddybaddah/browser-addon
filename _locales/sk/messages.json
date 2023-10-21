@@ -179,6 +179,10 @@
         "message": "Komunikovať s KeePassom pomocou tohto portu TCP/IP",
         "description": ""
     },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
+    },
     "pref_keePassRPCPortWarning_label": {
         "message": "Poznámka: zmeňte nastavenia v Keepass.config, lebo inak Kee nebude vždy vedieť komunikovať s KeePass-om",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
