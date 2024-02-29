@@ -179,6 +179,10 @@
         "message": "해당 TCP/IP 포트를 사용하여 KeePass와 통신",
         "description": ""
     },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
+    },
     "pref_keePassRPCPortWarning_label": {
         "message": "NB: KeePass.config에서 설정을 변경하지 않으면 KeePass와 지속적으로 통신할 수 없습니다",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"

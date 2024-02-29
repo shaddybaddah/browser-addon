@@ -175,6 +175,10 @@
         "message": "KeePass との接続に使用する TCP/IP ポート",
         "description": ""
     },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
+    },
     "pref_keePassRPCPortWarning_label": {
         "message": "注意：KeePass.config あるいは Kee の設定を変更した場合、KeePassと常に接続できるとは限りません。",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
