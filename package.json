@@ -1,7 +1,7 @@
 {
   "name": "kee-browser-addon",
-  "displayName": "Kee - Password Manager",
-  "description": "Kee adds private, secure and easy password management features which save time and keep your private data more secure.",
+    "displayName": "Kee - Password Manager (SB)",
+  "description": "Kee adds private, secure and easy password management features which save time and keep your private data more secure. Shaddy Baddah's customizations",
   "version": "3.11.135",
   "devDependencies": {
     "@ffflorian/jszip-cli": "^3.4.1",
