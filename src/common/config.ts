@@ -56,6 +56,7 @@ export class Config {
     keePassDBToOpen: string;
     keePassMRUDB: string;
     KeePassRPCWebSocketHost: string;
+    KeePassRPCWebSocketPath: string;
     KeePassRPCWebSocketPort: number;
     KeePassRPCWebSocketSecure: boolean;
     KPRPCUsername: string;

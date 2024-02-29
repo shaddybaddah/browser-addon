@@ -175,6 +175,14 @@
         "message": "打开或登录 KeePass 时使用此数据库文件",
         "description": ""
     },
+    "pref_keePassRPCHost_label": {
+        "message": "Communicate with KeePass using this TCP/IP host",
+        "description": ""
+    },
+    "pref_keePassRPCPath_label": {
+        "message": "Communicate with KeePass using this WebSocket context path (eg. /keepass)",
+        "description": ""
+    },
     "pref_keePassRPCPort_label": {
         "message": "使用此 TCP/IP 端口与 KeePass 通信",
         "description": ""
@@ -182,6 +190,10 @@
     "pref_keePassRPCPortWarning_label": {
         "message": "注意：一同更改 KeePass.config 中的设置，否则 Kee 将不能始终与 KeePass 保持通讯",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
+    },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
     },
     "pref_logLevel_desc": {
         "message": "选择想记录多详细的日志。越高的级别输出越详细的信息。",

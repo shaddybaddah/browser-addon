@@ -14,6 +14,7 @@ export class WebsocketSessionManager {
 
     private webSocketPort: number;
     private webSocketHost: string;
+    private webSocketPath: string;
     private webSocketURI: string;
     public webSocket: WebSocket;
 
@@ -81,6 +82,7 @@ export class WebsocketSessionManager {
         this.wasEverOpen = false; // Allows us to only do cleanup when required
 
         this.webSocketHost = "127.0.0.1";
+        this.webSocketPath = "/";
         this.webSocket = null;
 
         // We use a HTTP channel for basic polling of the port listening status of
@@ -147,11 +149,21 @@ export class WebsocketSessionManager {
 
             this.webSocketHost = defaultWebSocketHost;
         }
+        const defaultWebSocketPath = "/";
+        this.webSocketPath = configManager.current.KeePassRPCWebSocketPath;
+        if (!this.webSocketPath) {
+            configManager.current.KeePassRPCWebSocketPath = defaultWebSocketPath;
+            configManager.save();
+
+            this.webSocketPath = defaultWebSocketPath;
+        } else {
+            this.webSocketPath = (this.webSocketPath.startsWith("/") ? "" : "/") + this.webSocketPath;
+        }
         const secureSuffix = configManager.current.KeePassRPCWebSocketSecure ? "s" : "";
         this.webSocketURI =
-            "ws" + secureSuffix + "://" + this.webSocketHost + ":" + this.webSocketPort;
+            "ws" + secureSuffix + "://" + this.webSocketHost + ":" + this.webSocketPort + this.webSocketPath;
         this.httpChannelURI =
-            "http" + secureSuffix + "://" + this.webSocketHost + ":" + this.webSocketPort;
+            "http" + secureSuffix + "://" + this.webSocketHost + ":" + this.webSocketPort + this.webSocketPath;
     }
 
     tryToconnectToWebsocket() {

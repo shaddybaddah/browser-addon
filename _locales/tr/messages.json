@@ -171,17 +171,25 @@
         "message": "KeePass'i açarken bu veritabanını kullan",
         "description": ""
     },
-    "pref_keePassRPCPort_label": {
-        "message": "KeePass ile bu TCP/IP portunu kullanarak iletişim kur",
+    "pref_keePassRPCHost_label": {
+        "message": "Communicate with KeePass using this TCP/IP host",
         "description": ""
     },
-    "pref_keePassRPCSecure_label": {
-        "message": "Communicate with KeePass using secure TCP/IP",
+    "pref_keePassRPCPath_label": {
+        "message": "Communicate with KeePass using this WebSocket context path (eg. /keepass)",
+        "description": ""
+    },
+    "pref_keePassRPCPort_label": {
+        "message": "KeePass ile bu TCP/IP portunu kullanarak iletişim kur",
         "description": ""
     },
     "pref_keePassRPCPortWarning_label": {
         "message": "Not: Bu ayarları KeePass.config üzerinden değiştirin yoksa Kee düzenli bir şekilde KeePass ile iletişim kuramayabilir.",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
+    },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
     },
     "pref_listAllOpenDBs_label": {
         "message": "List logins from all open Kee Vaults and KeePass databases",

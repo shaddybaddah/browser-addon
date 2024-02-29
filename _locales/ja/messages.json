@@ -171,17 +171,25 @@
         "message": "KeePassの起動・ログイン時に使用するデータベースファイル",
         "description": ""
     },
-    "pref_keePassRPCPort_label": {
-        "message": "KeePass との接続に使用する TCP/IP ポート",
+    "pref_keePassRPCHost_label": {
+        "message": "Communicate with KeePass using this TCP/IP host",
         "description": ""
     },
-    "pref_keePassRPCSecure_label": {
-        "message": "Communicate with KeePass using secure TCP/IP",
+    "pref_keePassRPCPath_label": {
+        "message": "Communicate with KeePass using this WebSocket context path (eg. /keepass)",
+        "description": ""
+    },
+    "pref_keePassRPCPort_label": {
+        "message": "KeePass との接続に使用する TCP/IP ポート",
         "description": ""
     },
     "pref_keePassRPCPortWarning_label": {
         "message": "注意：KeePass.config あるいは Kee の設定を変更した場合、KeePassと常に接続できるとは限りません。",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
+    },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
     },
     "pref_listAllOpenDBs_label": {
         "message": "List logins from all open Kee Vaults and KeePass databases",

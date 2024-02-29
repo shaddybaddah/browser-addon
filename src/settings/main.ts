@@ -90,16 +90,20 @@ function loadInitialConfig() {
         configManager.current.currentSearchTermTimeout
             ? configManager.current.currentSearchTermTimeout.toString()
             : "";
-    (document.getElementById("pref_keePassRPCHost_label") as HTMLInputElement).value =
-        configManager.current.KeePassRPCWebSocketHost
-        ? configManager.current.KeePassRPCWebSocketHost.toString()
-        : "";
-    (document.getElementById("pref_keePassRPCPort_label") as HTMLInputElement).value =
-        configManager.current.KeePassRPCWebSocketPort
+    (document.getElementById("pref_keePassRPCPort_label") as HTMLInputElement).value = configManager
+        .current.KeePassRPCWebSocketPort
         ? configManager.current.KeePassRPCWebSocketPort.toString()
         : "";
-    (document.getElementById("pref_keePassRPCSecure_label") as HTMLInputElement).checked =
-        configManager.current.KeePassRPCWebSocketSecure
+    (document.getElementById("pref_keePassRPCHost_label") as HTMLInputElement).value = configManager
+        .current.KeePassRPCWebSocketHost
+        ? configManager.current.KeePassRPCWebSocketHost.toString()
+        : "";
+    (document.getElementById("pref_keePassRPCPath_label") as HTMLInputElement).value = configManager
+        .current.KeePassRPCWebSocketPath
+        ? configManager.current.KeePassRPCWebSocketPath.toString()
+        : "";
+    (document.getElementById("pref_keePassRPCSecure_label") as HTMLInputElement).checked = configManager
+        .current.KeePassRPCWebSocketSecure
         ? configManager.current.KeePassRPCWebSocketSecure
         : null;
 
@@ -166,6 +170,7 @@ function setupInputListeners() {
         .getElementById("pref_currentSearchTermTimeout_label")
         .addEventListener("change", saveCurrentSearchTermTimeout);
     document.getElementById("pref_keePassRPCHost_label").addEventListener("change", saveKPRPCPort);
+    document.getElementById("pref_keePassRPCPath_label").addEventListener("change", saveKPRPCPort);
     document.getElementById("pref_keePassRPCPort_label").addEventListener("change", saveKPRPCPort);
     document
         .getElementById("pref_keePassRPCSecure_label")
@@ -1135,6 +1140,9 @@ function saveKPRPCPort(e) {
     e.preventDefault();
     configManager.current.KeePassRPCWebSocketHost = (document.getElementById(
         "pref_keePassRPCHost_label"
+    ) as HTMLInputElement).value;
+    configManager.current.KeePassRPCWebSocketPath = (document.getElementById(
+        "pref_keePassRPCPath_label"
     ) as HTMLInputElement).value;
     configManager.current.KeePassRPCWebSocketPort = parseInt(
         (document.getElementById("pref_keePassRPCPort_label") as HTMLInputElement).value

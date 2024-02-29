@@ -171,17 +171,25 @@
         "message": "Para abrir o conectarse a KeePass, usar éste archivo de base de datos.",
         "description": ""
     },
-    "pref_keePassRPCPort_label": {
-        "message": "Comunicarse con KeePass usando éste puerto TCP/IP",
+    "pref_keePassRPCHost_label": {
+        "message": "Communicate with KeePass using this TCP/IP host",
         "description": ""
     },
-    "pref_keePassRPCSecure_label": {
-        "message": "Communicate with KeePass using secure TCP/IP",
+    "pref_keePassRPCPath_label": {
+        "message": "Communicate with KeePass using this WebSocket context path (eg. /keepass)",
+        "description": ""
+    },
+    "pref_keePassRPCPort_label": {
+        "message": "Comunicarse con KeePass usando éste puerto TCP/IP",
         "description": ""
     },
     "pref_keePassRPCPortWarning_label": {
         "message": "Nota: cambiá la configuración en KeePass.config sino Kee no siempre será capaz de comunicarse con KeePass",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
+    },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
     },
     "pref_logLevel_desc": {
         "message": "Elegir cuan pretencioso querés que sea el registro. Cada nivel más alto de registro produce más registro de salida.",

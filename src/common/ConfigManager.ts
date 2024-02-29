@@ -45,6 +45,7 @@ defaultConfig.keePassDBToOpen = "";
 defaultConfig.keePassMRUDB = "";
 defaultConfig.KeePassRPCWebSocketPort = 12546;
 defaultConfig.KeePassRPCWebSocketHost = "127.0.0.1";
+defaultConfig.KeePassRPCWebSocketPath = "/";
 defaultConfig.KeePassRPCWebSocketSecure = false;
 defaultConfig.KPRPCUsername = "";
 defaultConfig.KPRPCStoredKeys = {};
