@@ -175,6 +175,14 @@
         "message": "Para abrir o conectarse a KeePass, usar este archivo de base de datos",
         "description": ""
     },
+    "pref_keePassRPCHost_label": {
+        "message": "Communicate with KeePass using this TCP/IP host",
+        "description": ""
+    },
+    "pref_keePassRPCPath_label": {
+        "message": "Communicate with KeePass using this WebSocket context path (eg. /keepass)",
+        "description": ""
+    },
     "pref_keePassRPCPort_label": {
         "message": "Comunicarse con KeePass usando este puerto TCP/IP",
         "description": ""
@@ -182,6 +190,10 @@
     "pref_keePassRPCPortWarning_label": {
         "message": "NB: cambia el ajuste en KeePass.config o sino KeeFox no siempre será capaz de comunicarse con KeePass",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
+    },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
     },
     "pref_logLevel_desc": {
         "message": "Elegir cuán explícito quieres que sea el registro. Cuánto más alto sea el nivel registrado, más detallado será el informe de salida.",

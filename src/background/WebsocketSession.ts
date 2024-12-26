@@ -14,6 +14,7 @@ export class WebsocketSessionManager {
 
     private webSocketPort: number;
     private webSocketHost: string;
+    private webSocketPath: string;
     private webSocketURI: string;
     public webSocket: WebSocket;
 
@@ -79,6 +80,7 @@ export class WebsocketSessionManager {
         this.wasEverOpen = false; // Allows us to only do cleanup when required
 
         this.webSocketHost = "127.0.0.1";
+        this.webSocketPath = "/";
         this.webSocket = null;
 
         // We use a HTTP channel for basic polling of the port listening status of
@@ -137,8 +139,29 @@ export class WebsocketSessionManager {
 
             this.webSocketPort = defaultWebSocketPort;
         }
-        this.webSocketURI = "ws://" + this.webSocketHost + ":" + this.webSocketPort;
-        this.httpChannelURI = "http://" + this.webSocketHost + ":" + this.webSocketPort + "/pingAvailabilityTest";
+        const defaultWebSocketHost = "127.0.0.1";
+        this.webSocketHost = configManager.current.KeePassRPCWebSocketHost;
+        if (!this.webSocketHost) {
+            configManager.current.KeePassRPCWebSocketHost = defaultWebSocketHost;
+            configManager.save();
+
+            this.webSocketHost = defaultWebSocketHost;
+        }
+        const defaultWebSocketPath = "/";
+        this.webSocketPath = configManager.current.KeePassRPCWebSocketPath;
+        if (!this.webSocketPath) {
+            configManager.current.KeePassRPCWebSocketPath = defaultWebSocketPath;
+            configManager.save();
+
+            this.webSocketPath = defaultWebSocketPath;
+        } else {
+            this.webSocketPath = (this.webSocketPath.startsWith("/") ? "" : "/") + this.webSocketPath;
+        }
+        const secureSuffix = configManager.current.KeePassRPCWebSocketSecure ? "s" : "";
+        this.webSocketURI =
+            "ws" + secureSuffix + "://" + this.webSocketHost + ":" + this.webSocketPort + this.webSocketPath;
+        this.httpChannelURI =
+            "http" + secureSuffix + "://" + this.webSocketHost + ":" + this.webSocketPort + this.webSocketPath + (this.webSocketPath.endsWith("/") ? "" : "/") + "pingAvailabilityTest";
     }
 
     tryToconnectToWebsocket() {

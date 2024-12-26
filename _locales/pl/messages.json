@@ -175,6 +175,14 @@
         "message": "Podczas otwierania lub logowania do KeePassa używaj tego pliku z bazą haseł",
         "description": ""
     },
+    "pref_keePassRPCHost_label": {
+        "message": "Communicate with KeePass using this TCP/IP host",
+        "description": ""
+    },
+    "pref_keePassRPCPath_label": {
+        "message": "Communicate with KeePass using this WebSocket context path (eg. /keepass)",
+        "description": ""
+    },
     "pref_keePassRPCPort_label": {
         "message": "Komunikuj się z KeePassem używając tego portu TCP/IP",
         "description": ""
@@ -182,6 +190,10 @@
     "pref_keePassRPCPortWarning_label": {
         "message": "Uwaga: Zmień ustawienie w pliku KeePass.config, aby Kee mógł komunikować się z KeePassem.",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
+    },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
     },
     "pref_logLevel_desc": {
         "message": "Wybierz jak bardzo szczegółowy ma być log. Każdy wyższy poziom logu oznacza więcej danych na wyjściu.",

@@ -175,6 +175,14 @@
         "message": "При відкритті чи вході в KeePass, використовувати цей файл бази даних",
         "description": ""
     },
+    "pref_keePassRPCHost_label": {
+        "message": "Communicate with KeePass using this TCP/IP host",
+        "description": ""
+    },
+    "pref_keePassRPCPath_label": {
+        "message": "Communicate with KeePass using this WebSocket context path (eg. /keepass)",
+        "description": ""
+    },
     "pref_keePassRPCPort_label": {
         "message": "З'єднуватись з KeePass, використовуючи цей порт TCP/IP",
         "description": ""
@@ -182,6 +190,10 @@
     "pref_keePassRPCPortWarning_label": {
         "message": "Зверніть увагу: зміна налаштувань KeePass.config або Kee може порушити зв'язок з KeePass",
         "description": "Displayed to the user near the setting for changing the KeePassRPC port"
+    },
+    "pref_keePassRPCSecure_label": {
+        "message": "Communicate with KeePass using secure TCP/IP",
+        "description": ""
     },
     "pref_logLevel_desc": {
         "message": "Налаштуйте деталізацію журналу. Кожен вищий рівень журналу містить більше подробиць.",
